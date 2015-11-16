@@ -5,6 +5,7 @@ import java.util.Random;
 doItInParallel(loadData())
 
 def loadData(){
+    // override this method with your own loading data logic
     list = new ArrayList<String>();
 
     for(i=0;i < 100 ; i++){
@@ -13,6 +14,8 @@ def loadData(){
     return list
 }
 def doTask(taskData){
+    // override this method with your own specific task
+    list = new ArrayList<String>();
     println taskData
 }
 def doItInParallel(data){
