@@ -1,6 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import de.hybris.platform.core.Registry
+
+// get the current tenant of the root thread, to be used on dotask method
+mastertenant = Registry.getCurrentTenant()
 
 doItInParallel(loadData())
 
@@ -14,6 +18,8 @@ def loadData(){
     return list
 }
 def doTask(taskData){
+    // keep the following line for hybris context
+    Registry.setCurrentTenant(mastertenant)
     // override this method with your own specific task
     list = new ArrayList<String>();
     println taskData
