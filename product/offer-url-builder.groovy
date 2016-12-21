@@ -1,4 +1,4 @@
-resolver = spring.getBean("outizDefaultProductModelUrlResolver")
+resolver = spring.getBean("defaultProductModelUrlResolver")
 fss = spring.getBean("flexibleSearchService")
 rst = fss.search("Select {pk} from {offer as o join catalogversion as cv on {o.catalogversion}={cv.pk}} where {cv.version}='Online'").getResult()
 rst.each {
