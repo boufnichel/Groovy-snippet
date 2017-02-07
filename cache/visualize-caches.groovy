@@ -1,3 +1,4 @@
+// replace with id of the cache manager bean
 ehCacheBeanManagerName = "outizEhCacheManager";
 
 cacheManager = spring.getBean(ehCacheBeanManagerName)
